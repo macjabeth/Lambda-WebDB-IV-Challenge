@@ -1,6 +1,6 @@
 {
+  "port": 3000,
   "knex": {
-    "debug": true,
     "client": "sqlite3",
     "connection": {
       "filename": "./data/recipebook.db3"

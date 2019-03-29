@@ -19,7 +19,7 @@ server.use('/api/dishes', require('../routes/dishes'));
 server.use('/api/recipes', require('../routes/recipes'));
 
 server.use('/api', (req, res) => {
-  res.status(418).json({ message: 'You. Shall. Pass!' });
+  res.status(418).json({ message: "It's working! It's working!!!" });
 });
 
 module.exports = server;
