@@ -12,11 +12,8 @@
 Dish
   ID  Name
 
-DishRecipes
-  DishID[FK Dish(ID)]   RecipeID[FK Recipe(ID)]
-
 Recipe
-  ID  Name  Instructions
+  ID DishID[FK Dish(ID)]  Name  Instructions
 
 RecipeIngredients
   RecipeID[FK Recipe(ID)]   IngredientID[FK Ingredient(ID)]

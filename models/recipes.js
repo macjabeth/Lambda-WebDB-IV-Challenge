@@ -2,12 +2,9 @@ const db = require('../data/db');
 
 module.exports = {
   get: () => {
-    return db({ r: 'recipes', dr: 'dish_recipes', d: 'dishes' })
-      .select('r.name', 'd.name')
-      .where({
-        ['r.id']: 'dr.recipe_id',
-        ['d.id']: 'dr.dish_id'
-      });
+    return db('recipes')
+      .join('dishes', 'recipes.dish_id', 'dishes.id')
+      .select({ recipe: 'recipes.name', dish: 'dishes.name'})
   },
 
   add: (recipe) => db('recipes').insert(recipe),
