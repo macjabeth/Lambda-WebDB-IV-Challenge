@@ -7,6 +7,20 @@
 - seeding.
 - knex.
 
+## NF Layout
+
+Dish
+  ID  Name
+
+Recipe
+  ID DishID[FK Dish(ID)]  Name  Instructions
+
+RecipeIngredients
+  RecipeID[FK Recipe(ID)]   IngredientID[FK Ingredient(ID)]
+
+Ingredient
+  ID  Name  Quantity
+
 ## Assignment
 
 Design the **data model** for a _recipe book_ application, then use `Knex migrations and seeding` functionality to build a `SQLite3` database based on the model and seed it with test data.
